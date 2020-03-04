@@ -1,0 +1,14 @@
+com\mx\ciberCQ\web\MaterialBeans.class
+com\mx\servicio\DescripcionService.class
+com\mx\ciberCQ\web\BeanConfiguracion.class
+com\mx\servicio\MaterialServiceImpl.class
+com\mx\datos\MaterialIml.class
+com\mx\ciberQC\domain\DescripcionPK.class
+com\mx\ciberQC\domain\Descripcion.class
+com\mx\servicio\DescripcionServiceImpl.class
+com\mx\servicio\MaterialService.class
+com\mx\datos\DescripcionImpl.class
+com\mx\ciberQC\domain\Material.class
+com\mx\servicio\Meterial.class
+com\mx\datos\DescripcionDao.class
+com\mx\datos\MaterialDao.class

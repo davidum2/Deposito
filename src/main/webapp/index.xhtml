@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Listado de Material</title>
+    </h:head>
+    <h:body>
+        <p:ajaxStatus style="width: 16px;height: 16px;" id="ajaxStatusPanel">
+            <f:facet name="start">
+                <h:graphicImage library="images" name="ajaxloading.gif" />
+            </f:facet>
+
+            <f:facet name="complete">
+                <h:outputText value="" />
+            </f:facet>
+
+        </p:ajaxStatus>
+        <form id="ingreso">
+            <h:inputText value="#{resguardo.id}"/>
+            <h:commandButton action="#{resguardo.encontrar}"/>
+            
+        </form>
+        
+        <h:form id="materialListForm">
+            <p:growl id="messages" showDetail="true" />
+            <p:messages/>
+
+            <p:dataTable id="materialDataTable" value="#{resguardo.lsitaMaterial}" var="material" editable="flase" rowKey="#{material.id}" 
+                         selection="#{resguardo.materialseleccionado}" selectionMode="single" >            
+
+                
+                
+                
+
+                <p:column headerText="Número de Docuemtno">
+                   
+                    <h:outputText value="#{material.id}" />
+                </p:column>
+
+
+                <p:column headerText="Origen">
+                    <h:outputText value="#{material.valor}" />
+                </p:column>
+
+                <p:column headerText="Area destino">
+                    <h:outputText value="#{material.observaciones}" />
+                </p:column>
+
+               
+                
+               
+                <f:facet name="footer">
+                     <p:linkButton outcome="index" value="Regresar" style="margin-right:20px;">
+                        <f:param name="productId" value="10" />
+                     </p:linkButton>
+                </f:facet>
+            </p:dataTable>
+        </h:form>
+    </h:body>
+</html>
